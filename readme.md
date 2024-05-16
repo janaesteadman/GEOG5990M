@@ -1,4 +1,4 @@
-Background/Context
+Background
 
 This project aims to explore the relationship between the availability of green spaces and various demographic variables across the London boroughs. Urban green spaces are vital for the well-being of city residents, providing numerous health, environmental, and social benefits. Understanding how these green spaces correlate with different demographic factors such as education levels, age groups, and employment status can inform urban planning and policy-making, helping to create healthier and more equitable urban environments.
 
