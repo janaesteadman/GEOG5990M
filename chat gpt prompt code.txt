@@ -1,0 +1,68 @@
+# Calculate percentiles for the two variables
+merged['percent_green'] = merged['percent_green'].rank(pct=True) * 100
+
+merged['Percentage Unemployed'] = merged['Percentage Unemployed'].rank(pct=True) * 100
+
+# Plot map based on bivariate choropleth
+fig, ax = plt.subplots(1, 1, figsize=(8, 10))
+
+alpha = 0.7
+
+merged['color_bivariate'] = [get_bivariate_choropleth_color(p1, p2) for p1, p2 in zip(merged['percent_green'].values, merged['Percentage Unemployed'].values)]
+
+merged.plot(ax=ax, color=merged['color_bivariate'], alpha=alpha, legend=False)
+
+cx.add_basemap(ax=ax, crs=merged.crs, source=cx.providers.Stamen.TonerLite)
+
+ax.set_xticks([])
+
+ax.set_yticks([])
+
+# Create inset legend
+ax_inset = ax.inset_axes([0.6, 0.6, 0.35, 0.35])
+
+ax_inset.set_aspect('equal', adjustable='box')
+
+count = 0
+
+xticks = [0]
+
+yticks = [0]
+
+for i, percentile_bound_p1 in enumerate(percentile_bounds):
+
+    for j, percentile_bound_p2 in enumerate(percentile_bounds):
+
+        percentileboxes = [Rectangle((i, j), 1, 1)]
+
+        pc = PatchCollection(percentileboxes, facecolor=colorlist[count], alpha=alpha)
+
+        count += 1
+
+        ax_inset.add_collection(pc)
+
+        if i == 0:
+
+            yticks.append(percentile_bound_p2)
+
+    xticks.append(percentile_bound_p1)
+
+ax_inset.set_xlim([0, len(percentile_bounds)])
+
+ax_inset.set_ylim([0, len(percentile_bounds)])
+
+ax_inset.set_xticks(list(range(len(percentile_bounds)+1)))
+
+ax_inset.set_xticklabels(xticks)
+
+ax_inset.set_xlabel('Percentage Unemployed')
+
+ax_inset.set_yticks(list(range(len(percentile_bounds)+1)))
+
+ax_inset.set_yticklabels(yticks)
+
+ax_inset.set_ylabel('Percentage Green Spaces')
+
+plt.savefig('bivariate_choropleth_map.jpg', dpi=300, bbox_inches='tight')
+
+plt.show()
