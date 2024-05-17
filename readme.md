@@ -1,6 +1,6 @@
 Background
 
-This project aims to explore the relationship between the availability of green spaces and various demographic variables across the London boroughs. Urban green spaces are vital for the well-being of city residents, providing numerous health, environmental, and social benefits. Understanding how these green spaces correlate with different demographic factors such as education levels, age groups, and employment status can inform urban planning and policy-making, helping to create healthier and more equitable urban environments.
+This project aims to explore the relationship between the availability of green spaces and various demographic variables across the London boroughs. Urban green spaces are vital for the well-being of city residents, providing numerous health, environmental, and social benefits (World Health Organization. Regional Office for Europe, 2016). Understanding how these green spaces correlate with different demographic factors such as education levels, age groups, and employment status can inform urban planning and policy-making, helping to create healthier and more equitable urban environments.
 
 Data
 
@@ -17,6 +17,11 @@ Code
 The code in this repository aims to:
 Clean and Process Data: Ensure the datasets are in the correct format for analysis.
 Perform Correlation Analysis: Calculate and interpret correlation coefficients to quantify the relationships between green spaces and demographic variables.
-Generate Bivariate Choropleth Maps: Create visualizations that illustrate the relationships between green spaces and various demographic variables across London boroughs.
+Generate Bivariate Choropleth Maps: Create visualizations that illustrate the relationships between green spaces and various demographic variables with strong correlations across London boroughs.
+
+Further Information
+To successfully run the code and reproduce the analysis, users should ensure they have the necessary Python environment set up, including all required libraries specified in the requirements.txt file. Additionally, users should verify that they have appropriate data files in the correct format and directory structure as outlined above. 
+
+References
 
 
