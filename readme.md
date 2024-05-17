@@ -24,30 +24,8 @@ Generate Bivariate Choropleth Maps: Create visualizations that illustrate the re
 To successfully run the code and reproduce the analysis, users should ensure they have the necessary Python environment set up, including all required libraries specified in the code. 
 Users should verify that they have appropriate data files in the correct format and directory structure as outlined above. 
 
-Additionally, the install system dependencies command
-(!apt-get update
-!apt-get install -y libcairo2-dev libjpeg-dev libgif-dev)
-to generate the bivariate chloropleth map is used for Debian based systems such as google colab. 
-
-The commands for various operating systems are as follows:
-
-## MacOS
-#Update Homebrew
-
-brew update
-
-#Install dependencies
-
-brew install cairo libjpeg giflib
-
-## Windows
-#Update conda
-
-conda update conda
-
-#Install dependencies
-
-conda install -c conda-forge cairo libjpeg-turbo giflib
+Additionally, the install system dependencies command to generate the bivariate chloropleth map is used for Debian based systems such as google colab. 
+The code provides different commands for alternate operating systems.
 
 # References
 
