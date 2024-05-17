@@ -33,17 +33,22 @@ The commands for various operating systems are as follows:
 
 ## MacOS
 #Update Homebrew
+
 brew update
+
 #Install dependencies
+
 brew install cairo libjpeg giflib
 
 ## Windows
 #Update conda
+
 conda update conda
 
 #Install dependencies
+
 conda install -c conda-forge cairo libjpeg-turbo giflib
 
-References
+# References
 
-
+World Health Organization. Regional Office for Europe 2016. Urban green spaces and health. iris.who.int.
