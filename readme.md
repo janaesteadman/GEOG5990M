@@ -1,8 +1,8 @@
-Background
+# Background
 
 This project aims to explore the relationship between the availability of green spaces and various demographic variables across the London boroughs. Urban green spaces are vital for the well-being of city residents, providing numerous health, environmental, and social benefits (World Health Organization. Regional Office for Europe, 2016). Understanding how these green spaces correlate with different demographic factors such as education levels, age groups, and employment status can inform urban planning and policy-making, helping to create healthier and more equitable urban environments.
 
-Data
+# Data
 
 The GitHub repository contains the following datasets and files:
 London Boroughs Data: This is a spatial dataframe that contains information on London boroughs. 
@@ -12,7 +12,7 @@ Economic Activity: Number of residents employed, unemployed, and economically in
 Qualifications: Number of residents with different education levels in London LSOAs.
 Age: Number of residents in different age groups in London LSOAs.
 
-Code
+# Code
 
 The code in this repository aims to:
 Clean and Process Data: Ensure the datasets are in the correct format for analysis.
@@ -20,7 +20,29 @@ Perform Correlation Analysis: Calculate and interpret correlation coefficients t
 Generate Bivariate Choropleth Maps: Create visualizations that illustrate the relationships between green spaces and various demographic variables with strong correlations across London boroughs.
 
 Further Information
-To successfully run the code and reproduce the analysis, users should ensure they have the necessary Python environment set up, including all required libraries specified in the requirements.txt file. Additionally, users should verify that they have appropriate data files in the correct format and directory structure as outlined above. 
+
+To successfully run the code and reproduce the analysis, users should ensure they have the necessary Python environment set up, including all required libraries specified in the code. 
+Users should verify that they have appropriate data files in the correct format and directory structure as outlined above. 
+
+Additionally, the install system dependencies command
+(!apt-get update
+!apt-get install -y libcairo2-dev libjpeg-dev libgif-dev)
+to generate the bivariate chloropleth map is used for Debian based systems such as google colab. 
+
+The commands for various operating systems are as follows:
+
+# MacOS
+#Update Homebrew
+brew update
+#Install dependencies
+brew install cairo libjpeg giflib
+
+# Windows
+#Update conda
+conda update conda
+
+#Install dependencies
+conda install -c conda-forge cairo libjpeg-turbo giflib
 
 References
 
