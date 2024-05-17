@@ -19,7 +19,7 @@ Clean and Process Data: Ensure the datasets are in the correct format for analys
 Perform Correlation Analysis: Calculate and interpret correlation coefficients to quantify the relationships between green spaces and demographic variables.
 Generate Bivariate Choropleth Maps: Create visualizations that illustrate the relationships between green spaces and various demographic variables with strong correlations across London boroughs.
 
-Further Information
+# Further Information
 
 To successfully run the code and reproduce the analysis, users should ensure they have the necessary Python environment set up, including all required libraries specified in the code. 
 Users should verify that they have appropriate data files in the correct format and directory structure as outlined above. 
@@ -31,13 +31,13 @@ to generate the bivariate chloropleth map is used for Debian based systems such 
 
 The commands for various operating systems are as follows:
 
-# MacOS
+## MacOS
 #Update Homebrew
 brew update
 #Install dependencies
 brew install cairo libjpeg giflib
 
-# Windows
+## Windows
 #Update conda
 conda update conda
 
